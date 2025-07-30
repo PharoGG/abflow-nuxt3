@@ -24,47 +24,47 @@
 <script lang="ts" setup>
 const tasks = [
   {
-    icon: '/images/icons/tasks/icon1.svg',
+    icon: 'images/icons/tasks/icon1.svg',
     title: 'Разработка ПО',
     description: 'Создание кастомных приложений, веб-платформ, мобильных решений под нужды бизнеса.',
   },
   {
-    icon: '/images/icons/tasks/icon2.svg',
+    icon: 'images/icons/tasks/icon2.svg',
     title: 'Интеграция IT-систем',
     description: 'Объединение разнородных систем (CRM, ERP, БД) для их слаженной работы.',
   },
   {
-    icon: '/images/icons/tasks/icon3.svg',
+    icon: 'images/icons/tasks/icon3.svg',
     title: 'Облачные решения',
     description: 'Миграция в облако, настройка публичных/частных/гибридных облачных инфраструктур.',
   },
   {
-    icon: '/images/icons/tasks/icon4.svg',
+    icon: 'images/icons/tasks/icon4.svg',
     title: 'Автоматизация процессов',
     description: 'Внедрение ERP, CRM, BPM-систем для оптимизации бизнес-операций.',
   },
   {
-    icon: '/images/icons/tasks/icon5.svg',
+    icon: 'images/icons/tasks/icon5.svg',
     title: 'Аналитика и Big Data',
     description: 'Внедрение BI-систем, обработка данных, использование AI/ML для прогнозов.',
   },
   {
-    icon: '/images/icons/tasks/icon6.svg',
+    icon: 'images/icons/tasks/icon6.svg',
     title: 'Виртуализация и DevOps',
     description: 'Внедрение Docker, Kubernetes, CI/CD-инструментов для ускорения разработки.',
   },
   {
-    icon: '/images/icons/tasks/icon7.svg',
+    icon: 'images/icons/tasks/icon7.svg',
     title: 'Цифровая трансформация',
     description: 'Консультации и внедрение цифровых решений для модернизации бизнес-моделей.',
   },
   {
-    icon: '/images/icons/tasks/icon8.svg',
+    icon: 'images/icons/tasks/icon8.svg',
     title: 'UI дизайн',
     description: 'Создания привлекательных визуальных решений для сайтов, сервисов и приложений',
   },
   {
-    icon: '/images/icons/tasks/icon9.svg',
+    icon: 'images/icons/tasks/icon9.svg',
     title: 'UX проектирование',
     description: 'Разрабатка эффективных, простых и функциональных интерфейсов для процессов любой сложности',
   },

@@ -21,19 +21,19 @@
       <div class="team__cities">
         <MainPageCityTag
           class="team__city-tag tag--tashkent"
-          icon="/images/icons/countries/uzbekistan.svg"
+          icon="images/icons/countries/uzbekistan.svg"
           country="Узбекистан"
           city="Ташкент"
         />
         <MainPageCityTag
           class="team__city-tag tag--moscow"
-          icon="/images/icons/countries/russia.svg"
+          icon="images/icons/countries/russia.svg"
           country="Россия"
           city="Москва"
         />
         <MainPageCityTag
           class="team__city-tag tag--dubai"
-          icon="/images/icons/countries/unitedarabemirates.svg"
+          icon="images/icons/countries/unitedarabemirates.svg"
           country="ОАЭ"
           city="Дубай"
         />

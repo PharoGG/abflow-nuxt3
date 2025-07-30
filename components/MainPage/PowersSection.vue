@@ -19,31 +19,31 @@
 <script lang="ts" setup>
 const powers = [
   {
-    icon: '/images/icons/powers/icon1.svg',
+    icon: 'images/icons/powers/icon1.svg',
     title: 'Разработка',
     description: 'Реализация проектов под ключ любой сложности. Усиление проектной команды. Работы с техническим долгом',
     color: '#4143ED'
   },
   {
-    icon: '/images/icons/powers/icon2.svg',
+    icon: 'images/icons/powers/icon2.svg',
     title: 'Работа с данными',
     description: 'Создание различных хранилищ и систем управления данными. Консалтинг в области BIG Data и построения моделей',
     color: '#00CAF2'
   },
   {
-    icon: '/images/icons/powers/icon3.svg',
+    icon: 'images/icons/powers/icon3.svg',
     title: 'Аналитика и аудит',
     description: 'Проведение анализа и аудита текущего состояния IT ландшафта или ПО. Разбор и описание legacy кода',
     color: '#2EE58A'
   },
   {
-    icon: '/images/icons/powers/icon4.svg',
+    icon: 'images/icons/powers/icon4.svg',
     title: 'Контроль качества & QA',
     description: 'Настройка и реализация мониторинга сервисов. Внедрение систем логирования. Проведение различных видов тестирования',
     color: '#F1A33D'
   },
   {
-    icon: '/images/icons/powers/icon5.svg',
+    icon: 'images/icons/powers/icon5.svg',
     title: 'Внедрение решений',
     description: 'Внедрение различных коробочных решений и их кастомизация под заказчика. Системы принятия решений, АБС, ITSM, CRM и прочие платформы от различных вендоров',
     color: '#F13D9D'
