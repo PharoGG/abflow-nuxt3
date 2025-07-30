@@ -2,13 +2,13 @@
   <section class="logos-section">
     <div class="logos-track">
       <div class="logos">
-        <NuxtImg
+        <img
           v-for="(logo, i) in logos"
           :key="'a' + i"
           :src="logo"
           class="logo"
         />
-        <NuxtImg
+        <img
           v-for="(logo, i) in logos"
           :key="'b' + i"
           :src="logo"

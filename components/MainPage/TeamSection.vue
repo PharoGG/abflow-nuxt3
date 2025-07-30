@@ -1,4 +1,3 @@
-import { NuxtImg } from '../../.nuxt/components';
 <template>
   <section class="team">
     <div class="team__content">
