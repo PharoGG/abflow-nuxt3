@@ -2,9 +2,7 @@
   <div>
     <MainHeader />
 
-    <!-- <main class="page-container"> -->
       <slot />
-    <!-- </main> -->
     <MainFooter />
   </div>
 </template>
