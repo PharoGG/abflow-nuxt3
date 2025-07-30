@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       site: {
-        url: 'https://PharoGG.github.io/abflow-nuxt3',
+        url: 'https://pharogg.github.io/abflow-nuxt3',
         name: 'Abflow',
         description: 'Abflow - автоматизация бизнес процессов',
       }
@@ -51,19 +51,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'static'
-  },
-
-  image: {
-    dir: 'public',
-    providers: {
-      static: {
-        name: 'static',
-        provider: '~/providers/static.ts',
-        options: {
-          baseURL: '/abflow-nuxt3/',
-        }
-      }
-    }
   },
 
   devtools: { enabled: true },

@@ -1,7 +1,7 @@
 <template>
   <div class="city-tag">
     <div class="city-tag__icon">
-      <NuxtImg :src="icon" alt="Country icon" width="40" height="40" />
+      <img :src="icon" alt="Country icon" width="40" height="40" />
     </div>
     <div class="city-tag__text">
       <p class="city-tag__country">{{ country }}</p>

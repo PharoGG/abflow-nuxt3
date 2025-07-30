@@ -8,7 +8,7 @@
           :src="logo"
           class="logo"
         />
-        <NuxtImg
+        <img
           v-for="(logo, i) in logos"
           :key="'b' + i"
           :src="logo"

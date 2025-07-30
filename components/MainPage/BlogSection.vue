@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 const news = [
   {
-    image: '/images/blog/blog1.png',
+    image: 'images/blog/blog1.png',
     title: 'Проверка реестра должников по ИИН',
     text: 'В современном мире, когда все процессы становятся все более автоматизированными и ускоренными, получение займа стало…',
     topic: 'Разработка',
@@ -25,7 +25,7 @@ const news = [
     date: '03.10.2023',
   },
   {
-    image: '/images/blog/blog2.png',
+    image: 'images/blog/blog2.png',
     title: 'UI/UX тренды 2025 года',
     text: 'Минимализм, микроанимации и кастомные иллюстрации — что будет в моде и почему.',
     topic: 'Дизайн',
@@ -33,7 +33,7 @@ const news = [
     date: '03.10.2023',
   },
   {
-    image: '/images/blog/blog3.png',
+    image: 'images/blog/blog3.png',
     title: 'Как мы помогли стартапу вырасти в 3 раза за 6 месяцев',
     text: 'Кейс о том, как правильная команда и технологии дают кратный рост.',
     topic: 'Бизнес',
