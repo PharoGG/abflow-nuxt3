@@ -1,0 +1,75 @@
+<template>
+  <div class="power">
+    <NuxtImg :src="icon" alt="icon" width="40" height="40"/>
+    <h4 class="power__title">{{ title }}</h4>
+    <p class="power__description">{{ description }}</p>
+    <span :style="{ backgroundColor: color }"></span>
+  </div>
+</template>
+
+<script lang="ts" setup>
+defineProps<{
+  icon: string
+  title: string
+  description: string
+  color: string
+}>()
+</script>
+
+<style scoped lang="scss">
+.power {
+  flex: 1 1 auto;
+  min-width: 280px;
+  border-radius: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
+  // transition: transform 0.3s ease;
+
+  // &:hover {
+  //   transform: translateY(-8px);
+  // }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0;
+    color: #000331;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 0;
+    color:#000331;
+    padding-bottom: 10px;
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  span {
+    margin-top: auto;
+    width: 120px;
+    height: 4px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+</style>
