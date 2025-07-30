@@ -53,6 +53,19 @@ export default defineNuxtConfig({
     preset: 'static'
   },
 
+  image: {
+    dir: 'public',
+    providers: {
+      static: {
+        name: 'static',
+        provider: '~/providers/static.ts',
+        options: {
+          baseURL: '/abflow-nuxt3/',
+        }
+      }
+    }
+  },
+
   devtools: { enabled: true },
 
   modules: [

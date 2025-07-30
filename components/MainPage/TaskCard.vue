@@ -1,6 +1,6 @@
 <template>
   <div class="task">
-    <img :src="icon" alt="icon" width="40" height="40"/>
+    <NuxtImg :src="icon" alt="icon" width="40" height="40"/>
     <h4 class="task__title">{{ title }}</h4>
     <p class="task__description">{{ description }}</p>
   </div>

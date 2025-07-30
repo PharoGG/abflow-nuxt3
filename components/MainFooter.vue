@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <img src="/images/logos/abflowlogo.svg" width="136" height="24"/>
+      <NuxtImg src="/images/logos/abflowlogo.svg" width="136" height="24"/>
       <p>2025</p>
     </div>
   </footer>

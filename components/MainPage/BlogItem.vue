@@ -1,6 +1,6 @@
 <template>
   <div class="blog-item">
-    <img :src="item.image"/>
+    <NuxtImg :src="item.image"/>
     <div class="blog-item__content">
       <div class="blog-item__content--wrapper">
         <div class="blog-item__content--text">

@@ -2,7 +2,7 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <img src="/images/logos/abflowlogo.svg" width="136" height="24"/>
+        <NuxtImg src="/images/logos/abflowlogo.svg" width="136" height="24"/>
       </div>
 
       <nav :class="{ open: isMenuOpen }" class="nav">

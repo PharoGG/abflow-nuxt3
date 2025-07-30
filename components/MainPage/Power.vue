@@ -1,6 +1,6 @@
 <template>
   <div class="power">
-    <img :src="icon" alt="icon" width="40" height="40"/>
+    <NuxtImg :src="icon" alt="icon" width="40" height="40"/>
     <h4 class="power__title">{{ title }}</h4>
     <p class="power__description">{{ description }}</p>
     <span :style="{ backgroundColor: color }"></span>
