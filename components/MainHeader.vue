@@ -6,11 +6,11 @@
       </div>
 
       <nav :class="{ open: isMenuOpen }" class="nav">
-        <a href="#" @click="closeMenu">Компетенции</a>
-        <a href="#" @click="closeMenu">Команда</a>
-        <a href="#" @click="closeMenu">Проекты</a>
-        <a href="#" @click="closeMenu">Вакансии</a>
-        <a href="#" @click="closeMenu">Разработка</a>
+        <a @click="closeMenu">Компетенции</a>
+        <a @click="closeMenu">Команда</a>
+        <a @click="closeMenu">Проекты</a>
+        <a @click="closeMenu">Вакансии</a>
+        <a @click="closeMenu">Разработка</a>
       </nav>
 
       <button class="burger" :class="{ open: isMenuOpen }" @click="toggleMenu">

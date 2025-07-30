@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'AB FLOW',
-      titleTemplate: '%s | AB FLOW',
       htmlAttrs: {
         lang: 'ru',
       },
@@ -37,6 +36,10 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ]
     }
+  },
+
+  nitro: {
+    preset: 'static'
   },
 
   devtools: { enabled: true },
