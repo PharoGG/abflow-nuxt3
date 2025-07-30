@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
 
   app: {
+    baseURL: '/abflow-nuxt3/',
     head: {
       title: 'AB FLOW',
       htmlAttrs: {
@@ -35,6 +36,16 @@ export default defineNuxtConfig({
         },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ]
+    }
+  },
+
+  runtimeConfig: {
+    public: {
+      site: {
+        url: 'https://PharoGG.github.io/abflow-nuxt3',
+        name: 'Abflow',
+        description: 'Abflow - автоматизация бизнес процессов',
+      }
     }
   },
 
