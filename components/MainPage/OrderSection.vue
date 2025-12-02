@@ -11,7 +11,16 @@
           <input type="text" placeholder="ФИО контактного лица" v-model="form.name" required />
           <input type="email" placeholder="Электронная почта" v-model="form.email" required />
           <textarea placeholder="Комментарий (необязательно)" v-model="form.comment"></textarea>
-          <p>Торжественно клянёмся, что соблюдаем политики и заботимся о персональных данных</p>
+          <div class="order__checkbox">
+            <label>
+              <input type="checkbox" v-model="form.agree" required />
+              <span class="custom-checkbox"></span>
+              <p>
+                Я даю согласие на обработку персональных данных
+                в соответствии с Политикой обработки персональных данных.
+              </p>
+            </label>
+          </div>
           <button type="submit">Заказать проект</button>
         </form>
       </div>
@@ -29,7 +38,8 @@ const form = reactive({
   company: '',
   name: '',
   email: '',
-  comment: ''
+  comment: '',
+  agree: false
 })
 
 function handleSubmit() {
@@ -203,5 +213,57 @@ defineExpose({ orderSection })
       }
     }
   }
+  
+  &__checkbox {
+  display: flex;
+  align-items: flex-start;
+
+  label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  input:checked + .custom-checkbox {
+    background-color: #4143ED;
+    border-color: #4143ED;
+  }
+
+  input:checked + .custom-checkbox::after {
+    content: "✔";
+    color: white;
+    font-size: 17px;
+    position: absolute;
+    left: 4px;
+    top: -2px;
+  }
+
+  p {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
 }
 </style>

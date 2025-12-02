@@ -1,45 +1,68 @@
 <template>
-  <div class="project">
+  <div class="project" @click="goToCase">
     <div class="project__cell">
       <h4 class="project__company">{{ company }}</h4>
-      <p class="project__direction" :style="{ backgroundColor: color }">{{ direction }}</p>
-    </div>
-    <div class="project__cell">
-      <h4 class="project__title">{{ title }}</h4>
       <p class="project__description">{{ description }}</p>
     </div>
-    <div class="project__cell" v-if="technologies">
-      <div class="project__technologies">{{ technologies }}</div>
+    <div class="project__cell">
+      <p class="project__text">{{ text }}</p>
+    </div>
+    <div class="project__cell">
+      <div class="project__direction">{{ direction }}</div>
+      <div class="project__link">
+        <img src="/public/images/icons/link.svg" alt="icon"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
+const router = useRouter()
+
+
+const props = defineProps<{
   company: string
-  direction: string
-  title: string
   description: string
-  technologies?: string
-  color: string
+  text: string
+  direction: string
+  slug?: string | null
 }>()
+
+const goToCase = () => {
+  if (props.slug) {
+    router.push(`/cases/${props.slug}`)
+  } else {
+    router.push('/404')
+  }
+}
 </script>
 
 <style scoped lang="scss">
 .project {
-  display: grid;
-  grid-template-columns: 1.2fr 3.3fr 1fr;
+  background-color: #FFFFFF;
+  padding: 24px;
+  border-radius: 16px;
+  border: #C2C3F4 1px solid;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
   gap: 16px;
-  padding: 24px 0;
-  border-bottom: 1px solid #C2C3F4;
+  transition: transform 0.2s ease;
 
-  &:first-child {
-    padding-top: 0;
+  &:hover {
+    transform: translateY(-4px);
   }
+  // transition: border 0.3s ease;
 
-  &:last-child {
-    padding-bottom: 0;
-    border: none;
+  // &:hover {
+  //   border: #4143ED 1px solid;
+  // }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    gap: 12px;
   }
 
   @media (max-width: 768px) {
@@ -47,16 +70,45 @@ defineProps<{
     flex-direction: column;
   }
 
-  @media (max-width: 480px) {
-    padding: 16px 0;
-    gap: 12px;
-  }
-
   &__cell {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
+
+    &:last-child {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+
+      img {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        margin: auto;
+        object-fit: cover;
+
+        @media (max-width: 480px) {
+          width: 26px;
+          height: 26px
+        }
+      }
+    }
   }
+
+  // &__link {
+  //   width: 30px;
+  //   padding: 8px 0;
+  //   border: #4143ED 1px solid;
+  //   border-radius: 10px;
+
+  //   @media (max-width: 480px) {
+  //     width: 24px;
+  //     padding: 5px 0;
+  //     border-radius: 8px;
+  //   }
+  // }
 
   &__company {
     font-size: 20px;
@@ -71,17 +123,14 @@ defineProps<{
     }
   }
 
-  &__direction {
+  &__description {
     margin: 0;
     font-size: 14px;
     line-height: 18px;
-    font-weight: 50;
-    padding: 2px 8px;
-    background: #4143ED;
-    color: #FFFFFF;
-    border-radius: 10px;
+    font-weight: 500;
+    color: #000331;
+    opacity: 40%;
     display: inline-block;
-    width: fit-content;
 
     @media (max-width: 480px) {
       font-size: 12px;
@@ -89,20 +138,7 @@ defineProps<{
     }
   }
 
-  &__title {
-    margin: 0;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 600;
-    color: #4143ED;
-
-    @media (max-width: 480px) {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  &__description {
+  &__text {
     margin: 0;
     font-size: 16px;
     line-height: 22px;
@@ -115,12 +151,20 @@ defineProps<{
     }
   }
 
-  &__technologies {
-    margin: 0;
-    font-size: 16px;
-    line-height: 22px;
+  &__direction {
+    border: #4143ED 1px solid;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 500;
-    color: #000331;
+    color: #4143ED;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: 8px;
+    }
   }
 }
 </style>

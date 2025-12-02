@@ -1,8 +1,17 @@
 <template>
   <section class="main">
     <div class="main__content">
+      <div class="main__text">
+        <p>
+          AB Flow предоставляет полный комплекс ИТ-услуг, становится для клиента ключевым
+          техническим партнером, который решает задачи по автоматизации бизнеса, повышению качества услуг,
+          развитию клиентского опыта, увеличению операционной эффективности и снижению затрат за счет внедрения передовых ИТ решений.<br/><br/>
+          Усиливаем конкурентные преимущества заказчиков, помогаем пройти ключевые этапы цифровой
+          трансформации бизнеса, разрабатываем новые продукты и услуги в финансовой сфере, логистике, ритейле, телекоме и др.
+        </p>
+      </div>
       <div class="main__tasksection">
-        <h2><span style="color: #4143ED;">Задачи,</span> которые мы решаем</h2>
+        <h3>Наши суперсилы</h3>
         <div class="main__tasklist">
           <MainPageTaskCard
             v-for="(item, index) in tasks"
@@ -13,10 +22,20 @@
           />
         </div>
       </div>
-      <div class="main__stacksection">
+      <div class="main__dosection">
+        <h3 class="main__dotitle">Что мы делаем</h3>
+        <div class="main__dolist">
+          <MainPageDoItem
+            v-for="(item, index) in things"
+            :key="index"
+            :text="item.text"
+          />
+        </div>
+      </div>
+      <!-- <div class="main__stacksection">
         <h3>Наш стек</h3>
         <MainPageStackList :stacks="stacks" />
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -69,41 +88,81 @@ const tasks = [
     description: 'Разрабатка эффективных, простых и функциональных интерфейсов для процессов любой сложности',
   },
 ]
-const stacks = [
+
+const things = [
   {
-    direction: 'Backend-разработка',
-    technologies: ['PHP', 'Golang', 'Java', 'Python']
+    text: 'Развиваем современные технологические решения, адаптированные к реалиям бизнеса.',
   },
   {
-    direction: 'Frontend-разработка',
-    technologies: ['Vue.js', 'React', 'Angular']
+    text: 'Помогаем пройти ключевые этапы цифровой трансформации компании,',
   },
   {
-    direction: 'Мобильная разработка',
-    technologies: ['Flutter', 'Kotlin']
+    text: 'Готовим бизнес к масштабированию и выходу на новые рынки и в новые сферы.',
   },
   {
-    direction: 'DevOps',
-    technologies: ['Docker', 'Kubernetes', 'CI/CD', 'Prometheus', 'Grafana', 'Zabbix', 'Graylog']
+    text: 'Помогаем сотрудникам компании в обучении новым инструментам и технологиям.',
   },
   {
-    direction: 'Системный анализ',
-    technologies: ['ТЗ', 'КД', 'OTAP', 'BRD', 'FRD', 'SRS', 'DFD', 'User Story', 'Use Case', 'BPMN', 'UML', 'RESTful и SOAP API', 'XML', 'ESB', 'Message broker', 'SQL']
+    text: 'Обеспечиваем контроль качества.',
   },
   {
-    direction: 'QA',
-    technologies: ['Postman', 'Soap UI', 'SQL', 'Selenium', 'JMeter', 'TestCase']
+    text: 'Реализуем проекты любой сложности под ключ.',
   },
   {
-    direction: 'Работа с данными',
-    technologies: ['Data Governance', 'Open Meta Data', 'Apache Airflow', 'Apache Superset', 'ClickHouse', 'Airbyte', 'GreenPlum', 'PFX', 'DBT', 'Spark']
-  }
+    text: 'Разрабатываем комплексную технологическую стратегию,',
+  },
+  {
+    text: 'Разрабатываем для клиентов компаний новые продукты и услуги.',
+  },
+  {
+    text: 'Используем эффективные решения для стабильной работы инфраструктуры.',
+  },
+  {
+    text: 'Внедряем ИИ в процессы клиентов.',
+  },
+  {
+    text: 'Настраиваем управление на основе данных.',
+  },
+  {
+    text: 'Усиливаем команды заказчика.',
+  },
 ]
+
+// const stacks = [
+//   {
+//     direction: 'Backend-разработка',
+//     technologies: ['PHP', 'Golang', 'Java', 'Python']
+//   },
+//   {
+//     direction: 'Frontend-разработка',
+//     technologies: ['Vue.js', 'React', 'Angular']
+//   },
+//   {
+//     direction: 'Мобильная разработка',
+//     technologies: ['Flutter', 'Kotlin']
+//   },
+//   {
+//     direction: 'DevOps',
+//     technologies: ['Docker', 'Kubernetes', 'CI/CD', 'Prometheus', 'Grafana', 'Zabbix', 'Graylog']
+//   },
+//   {
+//     direction: 'Системный анализ',
+//     technologies: ['ТЗ', 'КД', 'OTAP', 'BRD', 'FRD', 'SRS', 'DFD', 'User Story', 'Use Case', 'BPMN', 'UML', 'RESTful и SOAP API', 'XML', 'ESB', 'Message broker', 'SQL']
+//   },
+//   {
+//     direction: 'QA',
+//     technologies: ['Postman', 'Soap UI', 'SQL', 'Selenium', 'JMeter', 'TestCase']
+//   },
+//   {
+//     direction: 'Работа с данными',
+//     technologies: ['Data Governance', 'Open Meta Data', 'Apache Airflow', 'Apache Superset', 'ClickHouse', 'Airbyte', 'GreenPlum', 'PFX', 'DBT', 'Spark']
+//   }
+// ]
 </script>
 
 <style scoped lang="scss">
 .main {
-  background-color: #EFEFFF;
+  background-color: #FFFFFF;
   width: 100%;
   position: relative;
   display: flex;
@@ -114,10 +173,11 @@ const stacks = [
     max-width: 1200px;
     width: 100%;
     padding: 80px 120px;
+    padding-bottom: 0;
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 60px;
 
     @media (max-width: 1024px) {
       padding: 40px 48px;
@@ -126,6 +186,19 @@ const stacks = [
     @media (max-width: 480px) {
       padding: 24px 16px;
       gap: 24px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 500;
+      color: #000331;
+      margin: 0;
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     h2 {
@@ -149,6 +222,7 @@ const stacks = [
       margin-block-start: 0;
       margin-block-end: 0;
       color: #000331;
+      padding-bottom: 24px;
 
       @media (max-width: 480px) {
         font-size: 18px;
@@ -157,10 +231,18 @@ const stacks = [
     }
   }
 
+  &__text {
+    max-width: 66%;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
   &__tasksection {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 
     @media (max-width: 480px) {
       gap: 16px;
@@ -179,15 +261,44 @@ const stacks = [
 
   &__tasklist {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 8px;
     align-items: stretch;
     grid-auto-rows: 1fr;
 
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
+    }
+
     @media (max-width: 480px) {
-      gap: 12px;
-      align-items: none;
-      grid-auto-rows: none;
+      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    }
+  }
+
+  &__tasksection {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+      gap: 16px;
+    }
+  }
+
+  &__dotitle {
+    padding-bottom: 40px !important;
+  }
+
+  &__dolist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 40px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     }
   }
 }

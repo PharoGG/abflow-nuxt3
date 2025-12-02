@@ -1,7 +1,6 @@
 <template>
   <section class="blog">
     <div class="blog__content">
-      <h2><span style="color: #4143ED;">Блог,</span> в котором мы делимся<br/> своей экспертизой</h2>
       <div class="blog__list">
         <MainPageBlogItem
           v-for="(item, index) in news"
@@ -45,7 +44,7 @@ const news = [
 
 <style scoped lang="scss">
 .blog {
-  background-color: #EFEFFF;
+  background-color: #FFFFFF;
   width: 100%;
   position: relative;
   display: flex;
@@ -56,6 +55,7 @@ const news = [
     max-width: 1200px;
     width: 100%;
     padding: 80px 120px;
+    padding-top: 40px;
     text-align: left;
     display: flex;
     flex-direction: column;

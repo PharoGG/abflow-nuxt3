@@ -1,18 +1,16 @@
 <template>
   <section class="projects">
     <div class="projects__content">
-      <h2><span style="color: #4143ED;">Проекты,</span> которыми мы гордимся</h2>
+      <h3>Наши проекты</h3>
       <TransitionGroup name="fade" tag="div" class="projects__list">
         <MainPageProject
           v-for="(project, index) in visibleProjects"
           :key="project.description + index"
           :style="{ transitionDelay: `${index * 10}ms` }"
           :company="project.company"
-          :direction="project.direction"
-          :title="project.title"
           :description="project.description"
-          :technologies="project.technologies"
-          :color="project.color"
+          :text="project.text"
+          :direction="project.direction"
         />
       </TransitionGroup>
       <button @click="showAll = !showAll">
@@ -33,109 +31,71 @@ const visibleProjects = computed(() => {
 
 const projects = [
   {
-    company: 'Frilly',
-    direction: 'Разработка',
-    title: 'Разработка BNPL-сервиса',
-    description: 'Разработка c «нуля» BNPL платформы. Интеграция с интернет магазинами, кредиторами и платежными компаниями.',
-    technologies: 'PHP / Angular',
-    color: '#4143ED'
+    company: 'Beeline Казахстан',
+    description: 'Цифровой оператор связи, 11 млн клиентов',
+    text: 'Разработали стратегию развития скоринговых продуктов, которые позволяют клиентам подтвердить свою личность для получения банковских кредитов.',
+    direction: 'телеком',
   },
   {
-    company: 'Veelzy',
-    direction: 'Разработка',
-    title: 'Разработка мобильного приложения',
-    description: 'Разработка социального мобильного приложения, которое позволяет построить интересные маршрутов для велосипедистов.',
-    technologies: 'Flutter / Python',
-    color: '#4143ED'
+    company: 'Korzinka GO',
+    description: 'Крупнейшая розничная сеть Узбекистана',
+    text: 'Разработали мобильное приложение онлайн-супермаркета Korzinka Go, которое позволяет делать покупки, не выходя из дома.',
+    direction: 'ретейл',
   },
   {
-    company: 'Кибердом',
-    direction: 'Разработка',
-    title: 'Развитие сервисов',
-    description: 'Развитие фич сайта, личного кабинета резидента Кибердома и приложения. Интегсервисоврация с CRM Bitrix, реализация для управления пространством (умный дом)',
-    technologies: 'React / Kotlin / Bitrix',
-    color: '#4143ED'
-  },
-  {
-    company: 'Webbankir',
-    direction: 'Разработка',
-    title: 'Внедрение A/B-тестирования',
-    description: 'Внедрение инструмента A/B-тестирования GrowthBook, позволяющего проводить эксперименты, и обучение команды заказчика',
-    technologies: 'Flutter / Python',
-    color: '#4143ED'
-  },
-  {
-    company: 'МигКредит',
-    direction: 'Работа с данными',
-    title: 'Разработка хранилищя данных',
-    description: 'Разработка единого хранилища данных для группы компаний',
-    technologies: 's3+airbyte, FX+GreenPlum, DBT+airflow',
-    color: '#3DD3F1'
-  },
-  {
-    company: 'Beeline KZ',
-    direction: 'Работа с данными',
-    title: 'Разработка стратегий скоринговых продуктов',
-    description: 'Разработка стратегии развития BIG Data скоринговых продуктов и вывод их на рынок Казахстана',
-    technologies: '',
-    color: '#3DD3F1'
-  },
-  {
-    company: 'Kupi',
-    direction: 'Разработка',
-    title: 'Разработка сервиса букинга авиабилетов',
-    description: 'Разработка платформы для реализации авиабилетов с ориентацией на аудиторию Средней Азии',
-    technologies: 'PHP / Vue.js',
-    color: '#4143ED'
-  },
-  {
-    company: 'Bank.kz',
-    direction: 'UI/UX',
-    title: 'Разработка маркетплейса финуслуг',
-    description: 'Участие в разработке маркетплейса для Казахского рынка. UI/UX работы и создание дизайн концептов, мокапов, проектирование интерфейсов',
-    technologies: '',
-    color: '#F13D9D'
-  },
-  {
-    company: 'Korzinka Go',
-    direction: 'Разработка',
-    title: 'Разработка мобильного приложения доставки',
-    description: 'Онлайн супермаркет в Узбекистане, аналог Яндекс Go. Наша команда занималась доработками приложения доставки (LeBazar)',
-    technologies: '',
-    color: '#4143ED'
-  },
-  {
-    company: 'ОКБ',
-    direction: 'Разработка',
-    title: 'Разработка сайта БКИ',
-    description: 'Разработка и поддержка сайта крупнейшего Кредитного Бюро в России. Внедрение функций чат-бота',
-    technologies: 'Vue.js / Bitrix',
-    color: '#4143ED'
-  },
-  {
-    company: '1stOpus',
-    direction: 'Тестирование',
-    title: 'Приёмочное тестирование МП',
-    description: 'Функциональное и интеграционное тестирование мобильного приложения на Android и Apple устройствах',
-    technologies: '',
-    color: '#F1A33D'
+    company: 'Объединенное кредитное бюро',
+    description: 'Крупнейшее бюро кредитных историй в России',
+    text: 'Разработали сайт, с помощью которого компания предоставляет своим клиентам высокоэффективные сервисы по оценке рисков, управлению кредитным портфелем и противодействию мошенничеству.',
+    direction: 'финтех',
   },
   {
     company: 'СберРешения',
-    direction: 'Тестирование',
-    title: 'Нагрузочное тестирование сервисов',
-    description: 'Проведение нагрузочного тестирования сервиса Мои.Сберрешения. Формирование рекомендаций по оптимизации сервиса',
-    technologies: 'K6',
-    color: '#F1A33D'
+    description: 'Лидер в области аутсорсинга бизнес-процессов и финансового консалтинга в России и СНГ',
+    text: 'Провели независимый аудит отказоустойчивости сервиса.',
+    direction: 'консалтинг',
   },
   {
-    company: 'Webbankir',
-    direction: 'Работа с данными',
-    title: 'Внедрение Data Governance',
-    description: 'Внедрение инструмента Data Governance — OpenMetaData. Разработка коннекторов, настройка data lineage. Обучение Dataинженеров',
-    technologies: '',
-    color: '#3DD3F1'
-  }
+    company: 'Bank.kz',
+    description: 'Финансовый портал Казахстана',
+    text: 'Приняли участие в разработке маркетплейса для рынка Казахстана, провели UI/UX работы, создали дизайн концепты, мокапы, проектирование интерфейсов портала.',
+    direction: 'финтех',
+  },
+  {
+    company: 'Veelzy',
+    description: 'Персональный помощник для планирования безопасных, удобных и полезных велосипедных поездок',
+    text: 'Разработка приложения для велосипедистов, которое объединяет в себе социальные и навигационные сервисы: пользователь может спланировать поездки с учетом погоды, получает бонусы за активность, может видеть передвижения друзей и переписываться с ними.',
+    direction: 'тревел',
+  },
+  {
+    company: 'Frilly',
+    description: 'Сервис покупок частями',
+    text: 'Разработали c «нуля» BNPL платформу, которая позволяет клиенту оплачивать покупки частями, а бизнесу - увеличивать продажи и средний чек. Провели интеграцию с интернет магазинами, кредиторами и платежными компаниями.',
+    direction: 'финтех',
+  },
+  {
+    company: 'Кибердом',
+    description: 'Кибербез-хаб в центре Москвы',
+    text: 'Разработали сайт, приложение и личный кабинет для резидентов Кибердома, реализовали систему управления пространством (умный дом).',
+    direction: 'стартап',
+  },
+  {
+    company: 'DCS TRAMACO',
+    description: 'Логистическая компания для транспортировки фруктов и овощей, Словения',
+    text: 'Разработка приложения для логистической компании, позволяющая клиентам отслеживать свои грузы и статус их доставки.',
+    direction: 'логистика',
+  },
+  {
+    company: 'ПравоТех',
+    description: 'Экосистема сервисов для юристов',
+    text: 'Разработали специализированное приложение Case.one для юристов, систему автоматизации юридических процессов, которая помогает управлять делами, проектами, документами, задачами и отчетами в едином интерфейсе.',
+    direction: 'автоматизация',
+  },
+  {
+    company: 'Экофинанс',
+    description: 'Инновационная финансовая компания',
+    text: 'Реализовали сопровождение ИТ-инфраструктуры, разработали систему решений инцидентов, модуль досрочных погашений, обеспечили интеграцию новых продуктов с сервисами компании.',
+    direction: 'финтех',
+  },
 ]
 </script>
 
@@ -177,7 +137,7 @@ const projects = [
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
 
     @media (max-width: 1024px) {
       padding: 40px 48px;
@@ -189,9 +149,9 @@ const projects = [
       gap: 24px;
     }
 
-    h2 {
-      font-size: 40px;
-      line-height: 48px;
+    h3 {
+      font-size: 32px;
+      line-height: 40px;
       font-weight: 700;
       margin-block-start: 0;
       margin-block-end: 0;
@@ -227,8 +187,17 @@ const projects = [
     }
   }
   &__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 8px;
+    row-gap: 24px;
+    align-items: stretch;
+    grid-auto-rows: auto;
+
+    @media (max-width: 480px) {
+      align-items: none;
+      grid-auto-rows: none;
+    }
   }
 }
 </style>

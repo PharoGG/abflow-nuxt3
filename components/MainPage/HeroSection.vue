@@ -1,26 +1,48 @@
 <template>
-  <section class="hero">
-    <div class="hero__content">
-      <h1>Дай своему проекту<br/> свежий флоу</h1>
-      <p>Текст про компанию<br/> и кто-что делает</p>
-      <button @click="$emit('scroll-to-order')">Заказать проект</button>
+  <section class="hero" :style="bgStyle">
+    <div class="hero__content" :style="contentStyle">
+      <p v-if="subTitle">{{subTitle}}</p>
+      <h1 v-html="title"></h1>
+      <p v-if="desc" v-html="desc"></p>
+      <button
+        v-if="showButton"
+        @click="$emit('scroll-to-order')"
+      >
+        Заказать проект
+      </button>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 defineEmits(['scroll-to-order'])
+
+const props = defineProps<{
+  subTitle?: string
+  title: string
+  desc?: string
+  imgSrc: string
+  showButton?: boolean
+}>()
+
+const showButton = props.showButton ?? false
+
+const bgStyle = computed(() => ({
+  backgroundImage: `url(${props.imgSrc})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center top',
+  backgroundRepeat: 'no-repeat'
+}))
+
+const contentStyle = computed(() => ({
+  gap: props.subTitle ? "10px" : "39px"
+}))
 </script>
 
 <style scoped lang="scss">
 .hero {
   position: relative;
   width: 100%;
-  height: 834px;
-  background-image: url('/images/heroimg.png');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,21 +57,21 @@ defineEmits(['scroll-to-order'])
     z-index: 1;
   }
 
-  @media (max-width: 1440px) {
-    height: 754px;
-  }
+  // @media (max-width: 1440px) {
+  //   height: 754px;
+  // }
 
-  @media (max-width: 1024px) {
-    height: 654px;
-  }
+  // @media (max-width: 1024px) {
+  //   height: 654px;
+  // }
 
-  @media (max-width: 768px) {
-    height: 578px;
-  }
+  // @media (max-width: 768px) {
+  //   height: 578px;
+  // }
 
-  @media (max-width: 480px) {
-    height: 364px;
-  }
+  // @media (max-width: 480px) {
+  //   height: 364px;
+  // }
 
 
   &__content {
@@ -57,6 +79,7 @@ defineEmits(['scroll-to-order'])
     z-index: 2;
     max-width: 1200px;
     padding: 160px 120px;
+    padding-top: 196px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -64,12 +87,16 @@ defineEmits(['scroll-to-order'])
     text-align: left;
 
     @media (max-width: 1024px) {
-      padding: 0 48px;
+      padding: 160px 48px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 120px 48px;
     }
 
     @media (max-width: 480px) {
-      padding: 0 16px;
-      padding-top: 54px;
+      padding: 48px 16px;
+      padding-top: 104px;
     }
 
     h1 {

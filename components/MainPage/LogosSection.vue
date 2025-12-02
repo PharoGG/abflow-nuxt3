@@ -45,7 +45,7 @@ const logos = [
 
 <style scoped lang="scss">
 .logos-section {
-  background-color: #EFEFFF;
+  background-color: #FFFFFF;
   overflow: hidden;
   width: 100%;
   padding: 40px 0;

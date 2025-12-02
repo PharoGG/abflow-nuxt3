@@ -13,7 +13,7 @@ defineEmits(['scroll-to-order'])
 
 <style scoped lang="scss">
 .powers {
-  background-color: #EFEFFF;
+  background-color: #FFFFFF;
   width: 100%;
   position: relative;
   display: flex;

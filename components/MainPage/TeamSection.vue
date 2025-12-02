@@ -65,7 +65,7 @@
     position: absolute;
     bottom: 0;
     z-index: 0;
-    pointer-events: none; // не мешает кликам
+    pointer-events: none;
     user-select: none;
   }
 

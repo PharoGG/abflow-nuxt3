@@ -8,8 +8,8 @@
           <p>{{ item.text }}</p>
         </div>
         <div class="blog-item__content--line">
-          <p :style="{ backgroundColor: item.topicColor }">{{ item.topic }}</p>
           <p>{{ item.date }}</p>
+          <img src="/public/images/icons/link.svg" alt="icon" width="30" height="30"/>
         </div>
       </div>
     </div>
@@ -33,9 +33,11 @@ defineProps<{
 .blog-item {
   background-color: #ffffff;
   border-radius: 16px;
+  border: #C2C3F4 1px solid;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   transition: transform 0.2s ease;
 
   &:hover {
@@ -46,6 +48,11 @@ defineProps<{
     width: 100%;
     height: 160px;
     object-fit: cover;
+
+    &:last-child {
+      width: 30px;
+      height: 30px;
+    }
 
     @media (max-width: 480px) {
       height: 160px;
@@ -100,20 +107,10 @@ defineProps<{
       line-height: 20px;
 
       p {
-        font-size: 12px;
-        line-height: 12px;
+        font-size: 20px;
+        line-height: 28px;
         font-weight: 500;
-        margin: 0;
-      }
-
-      p:first-child {
-        color: #FFFFFF;
-        padding: 2px 8px;
-        border-radius: 8px;
-      }
-
-      p:last-child {
-        color: #000331;
+        color: #4143ED;
       }
     }
   }

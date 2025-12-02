@@ -2,15 +2,17 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <img src="/images/logos/abflowlogo.svg" width="136" height="24"/>
+        <a href="/">
+          <img src="/images/logos/abflowlogo.svg" width="136" height="24"/>
+        </a>        
       </div>
 
       <nav :class="{ open: isMenuOpen }" class="nav">
-        <a @click="closeMenu">Компетенции</a>
-        <a @click="closeMenu">Команда</a>
-        <a @click="closeMenu">Проекты</a>
-        <a @click="closeMenu">Вакансии</a>
-        <a @click="closeMenu">Разработка</a>
+        <a href="/solutions" @click="closeMenu">Решения</a>
+        <a href="/cases"@click="closeMenu">Кейсы</a>
+        <a href="/about" @click="closeMenu">О нас</a>
+        <a @click="closeMenu">Контакты</a>
+        <a>+7 (495) 123 4565</a>
       </nav>
 
       <button class="burger" :class="{ open: isMenuOpen }" @click="toggleMenu">
@@ -71,9 +73,14 @@ const closeMenu = () => {
       color: white;
       font-weight: 500;
       transition: color 0.2s ease;
+      cursor: pointer;
 
       &:hover {
         color: #007bff;
+      }
+
+      &:last-child {
+        padding-left: 90px;
       }
     }
 

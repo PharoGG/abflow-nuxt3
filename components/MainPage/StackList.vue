@@ -44,13 +44,16 @@ defineProps<{
 }
 
 .tag {
-  display: inline-block;
-  padding: 8px;
-  border: 1px solid #000331;
-  color: #000331;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  padding-top: 0;
+  border: 1px solid #4143ED;
+  color: #4143ED;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 500;
   white-space: nowrap;
 
@@ -62,7 +65,7 @@ defineProps<{
 
   @media (max-width: 480px) {
     padding: 4px 6px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }

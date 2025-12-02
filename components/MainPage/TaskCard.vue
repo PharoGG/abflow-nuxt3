@@ -16,7 +16,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .task {
-  background-color: #FFFFFF;
+  background-color: #EFEFFF;
   padding: 24px;
   border-radius: 16px;
   color: white;

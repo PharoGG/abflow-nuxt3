@@ -1,12 +1,16 @@
 <template>
   <div>
-    <MainPageHeroSection @scroll-to-order="scrollToOrder"/>
-    <MainPagePowersSection />
+    <MainPageHeroSection
+      title="Технологический<br/>партнер вашего бизнеса"
+      desc="Разрабатываем новые продукты, усиливаем конкурентные<br/> преимущества и помогаем пройти ключевые этапы<br/> цифровой трансформации бизнеса"
+      img-src="/images/heroimg.png"
+      :show-button="true"
+      @scroll-to-order="scrollToOrder"
+    />
     <MainPageMainSection />
     <MainPageProjectsSection />
-    <MainPageLogosSection />
     <MainPageStepSection @scroll-to-order="scrollToOrder"/>
-    <MainPageTeamSection />
+    <MainPageLogosSection />
     <MainPageBlogSection />
     <MainPageOrderSection ref="orderRef"/>
   </div>
