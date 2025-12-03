@@ -3,7 +3,7 @@
     <MainPageHeroSection
       title="Технологический<br/>партнер вашего бизнеса"
       desc="Разрабатываем новые продукты, усиливаем конкурентные<br/> преимущества и помогаем пройти ключевые этапы<br/> цифровой трансформации бизнеса"
-      img-src="/images/heroimg.png"
+      img-src="images/heroimg.png"
       :show-button="true"
       @scroll-to-order="scrollToOrder"
     />

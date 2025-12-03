@@ -8,9 +8,9 @@
       </div>
 
       <nav :class="{ open: isMenuOpen }" class="nav">
-        <a href="/solutions" @click="closeMenu">Решения</a>
-        <a href="/cases"@click="closeMenu">Кейсы</a>
-        <a href="/about" @click="closeMenu">О нас</a>
+        <a href="abflow-nuxt3/solutions" @click="closeMenu">Решения</a>
+        <a href="abflow-nuxt3/cases"@click="closeMenu">Кейсы</a>
+        <a href="abflow-nuxt3/about" @click="closeMenu">О нас</a>
         <a @click="closeMenu">Контакты</a>
         <a>+7 (495) 123 4565</a>
       </nav>

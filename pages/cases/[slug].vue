@@ -3,7 +3,7 @@
     <MainPageHeroSection
       subTitle="Кейсы"
       :title="caseName"
-      img-src="/images/heroimg2.png"
+      img-src="images/heroimg2.png"
       :show-button="false"
     />
     <component :is="componentName" />

@@ -3,7 +3,7 @@ import { SolutionsPageSolutionSection } from '../.nuxt/components';
   <div>
     <MainPageHeroSection
       title="Решения"
-      img-src="/images/heroimg2.png"
+      img-src="images/heroimg2.png"
       :show-button="false"
     />
     <SolutionsPageSolutionSection/>

@@ -30,7 +30,7 @@ const props = defineProps<{
 
 const goToCase = () => {
   if (props.slug) {
-    router.push(`/cases/${props.slug}`)
+    router.push(`abflow-nuxt3/cases/${props.slug}`)
   } else {
     router.push('/404')
   }

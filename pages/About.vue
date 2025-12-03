@@ -2,7 +2,7 @@
   <div>
     <MainPageHeroSection
       title="О нас"
-      img-src="/images/heroimg2.png"
+      img-src="images/heroimg2.png"
       :show-button="false"
     />
     <AboutPageAboutSection/>
