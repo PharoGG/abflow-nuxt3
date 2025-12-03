@@ -2,7 +2,7 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <a href="/">
+        <a href="/abflow-nuxt3/">
           <img src="/images/logos/abflowlogo.svg" width="136" height="24"/>
         </a>        
       </div>
